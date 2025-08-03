@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mystic Harmony Apothecary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --lavender-mist: #C8BFE7;
+      --sage-green: #A8C3A0;
+      --soft-earth: #E7D9C2;
+      --amethyst-deep: #6A4E77;
+      --charcoal-smoke: #4A4A4A;
+      --ivory-white: #FAF9F6;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--ivory-white);
+      color: var(--charcoal-smoke);
+    }
+
+    header {
+      background-color: var(--sage-green);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--amethyst-deep);
+      margin: 0;
+    }
+
+    nav {
+      background-color: var(--lavender-mist);
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--charcoal-smoke);
+      font-weight: 600;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--amethyst-deep);
+    }
+
+    .product-card {
+      background-color: var(--soft-earth);
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      display: inline-block;
+      width: 280px;
+      margin: 1rem;
+      vertical-align: top;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .product-card button {
+      background-color: var(--amethyst-deep);
+      color: var(--ivory-white);
+      border: none;
+      padding: 0.5rem 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--sage-green);
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    form button {
+      background-color: var(--amethyst-deep);
+      color: var(--ivory-white);
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: var(--charcoal-smoke);
+      color: var(--soft-earth);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    #contactSummary {
+      background-color: var(--soft-earth);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .product-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mystic Harmony Apothecary</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#products">Products</a>
+    <a href="#custom">Custom Orders</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>Experience the serenity and beauty of holistic living. Mystic Harmony Apothecary brings nature’s healing elements to your everyday rituals.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Mystic Harmony Apothecary was founded on the belief in mindful healing and intentional living. Our mission is to provide spiritual wellness products that are ethically sourced and hand-selected with love.</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <p>Take a look at our handcrafted creations and shop ambiance.</p>
+      <img src="https://via.placeholder.com/300x200" alt="Gallery image 1">
+      <img src="https://via.placeholder.com/300x200" alt="Gallery image 2">
+    </section>
+
+    <section id="products">
+      <h2>Featured Products</h2>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/280x180" alt="White Sage Bundle">
+        <h3>White Sage Bundle</h3>
+        <p>$12.00</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/280x180" alt="Amethyst Crystal">
+        <h3>Amethyst Crystal</h3>
+        <p>$18.00</p>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+
+    <section id="custom">
+      <h2>Custom Orders</h2>
+      <p>Let us create a personalized ritual kit or spiritual gift for you. Tell us what intention you want to set and we’ll craft something unique.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form onsubmit="saveContactForm(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="contactSummary"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mystic Harmony Apothecary | Designed with intention and care</p>
+  </footer>
+
+  <script>
+    function saveContactForm(event) {
+      event.preventDefault();
+      const contactData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      };
+
+      let allContacts = JSON.parse(localStorage.getItem('mysticContactForm')) || [];
+      allContacts.push(contactData);
+      localStorage.setItem('mysticContactForm', JSON.stringify(allContacts));
+
+      displayContactMessages();
+      alert('Thank you for your message!');
+      event.target.reset();
+    }
+
+    function displayContactMessages() {
+      const contactSummary = document.getElementById('contactSummary');
+      const allContacts = JSON.parse(localStorage.getItem('mysticContactForm')) || [];
+      contactSummary.innerHTML = '<h3>Contact Submissions</h3>' + allContacts.map(contact => `
+        <div style="margin-bottom: 1rem;">
+          <p><strong>Name:</strong> ${contact.name}</p>
+          <p><strong>Email:</strong> ${contact.email}</p>
+          <p><strong>Message:</strong> ${contact.message}</p>
+        </div>
+      `).join('');
+    }
+
+    window.onload = displayContactMessages;
+  </script>
+</body>
+</html>
